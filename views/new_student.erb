@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New <%= @squad['mascot'] %></title>
+</head>
+<body>
+<form action="/squads/<%= @squad['id'] %>/students/" method="post">
+  <p>
+    <label for="name">New <%= @squad['mascot'] %> Name: </label>
+    <input type="text" name="name" id="name">
+  </p>
+  <p>
+    <label for="age">New <%= @squad['mascot'] %> Age: </label>
+    <input type="text" name="age" id="age">
+  </p>
+  <p>
+    <label for="spirit_animal">New <%= @squad['mascot'] %> Spirit Animal: </label>
+    <input type="text" name="spirit_animal" id="spirit_animal">
+  </p>
+  <input type="submit" value="New <%= @squad['mascot'] %>">
+</form>  
+</body>
+</html>

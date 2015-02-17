@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= @student['name'] %></title>
+</head>
+<body>
+  <h1><%= @student['name'] %></h1>
+    <h3><%= @student['name'] %> is <%= @student['age'] %> years old.</h3>
+    <h3><%= @student['name'] %>'s spirit animal is the <%= @student['spirit_animal'] %>.</h3>
+    <h4><a href="/squads/<%= @squad['id'] %>/students/<%= @student['id'] %>/edit">Edit this student</a></h4>
+    <h4><a href="/squads/<%= @squad['id'] %>/students">Back to <%= @squad['mascot'] %>'s roster</a></h3>
+</body>
+</html>

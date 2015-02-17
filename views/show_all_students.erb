@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Students in <%= @squad['name'] %></title>
+</head>
+<body>
+  <h2>Here are the <%= @squad['mascot'] %>s!</h2>
+  <ul>
+   <% @students.each do |student| %> 
+    <li>
+      <h3><%= student['name'] %></h3>
+      <h4><a href="/squads/<%= @squad['id'] %>/students/<%= student['id'] %>">More info about <%= student['name'] %></a></h4>
+    </li>
+    <% end %>
+  </ul>
+  <h3><a href="/squads/<%= @squad['id'] %>/students/new">Add a new <%= @squad['mascot'] %>!</a></h3>
+  <h3><a href="/squads">Back to squads</a></h3>
+</body>
+</html>
