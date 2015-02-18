@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><%= @squad['name'] %> Edit</title>
+  <title><%= @squad.name %> Edit</title>
 </head>
 <body>
-  <form action="/squads/<%= @squad['id'] %>" method="post">
+  <form action="/squads/<%= @squad.id %>" method="post">
     <input type='hidden' name='_method' value='put'>
 
     <label for="name">New Name: </label>
-    <input type="text" name="name" id="name" value= "<%= @squad['name'] %>">
+    <input type="text" name="name" id="name" value= "<%= @squad.name %>">
 
     <label for="mascot">New Mascot: </label>
-    <input type="text" name="mascot" id="mascot" value= "<%= @squad['mascot'] %>">
+    <input type="text" name="mascot" id="mascot" value= "<%= @squad.mascot %>">
 
-    <input type="submit" value="Edit <%= @squad['name'] %>">
+    <input type="submit" value="Edit <%= @squad.name %>">
   </form>
 
-  <form action="/squads/<%= @squad['id'] %>" method = "post">
+  <form action="/squads/<%= @squad.id %>" method = "post">
     <input type='hidden' name='_method' value='delete'>
 
-    <input type="submit" value="Delete <%= @squad['name'] %>">
+    <input type="submit" value="Delete <%= @squad.name %>">
   </form>
 </body>
 </html>

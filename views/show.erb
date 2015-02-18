@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><%= @squad['name'] %></title>
+  <title><%= @squad.name %></title>
 </head>
 <body>
-  <h1><%= @squad['name'] %></h1>
-  <h2><a href="/squads/<%= @squad['id'] %>/edit">Edit <%= @squad['name'] %></a></h4>
-    <h3><%= @squad['name'] %>'s mascot is the <%= @squad['mascot'] %>.</h3>
-    <h3><%= @squad['name'] %> has <%= @student_count %> students.</h3>
-    <h4>Lest you've forgotten what a <%= @squad['mascot'].downcase %> is: </h4>
+  <h1><%= @squad.name %></h1>
+  <h2><a href="/squads/<%= @squad.id %>/edit">Edit <%= @squad.name %></a></h4>
+    <h3><%= @squad.name %>'s mascot is the <%= @squad.mascot %>.</h3>
+    <h3><%= @squad.name %> has <%= @student_count %> students.</h3>
+    <h4>Lest you've forgotten what a <%= @squad.mascot.downcase %> is: </h4>
     <img src="" height="300" width="300">
     <h4><a href="/squads">Back to squads</a></h4>
 
-    <h4><a href="/squads/<%= @squad['id'] %>/students">Show <%= @squad['mascot'] %> roster</a></h4>
+    <h4><a href="/squads/<%= @squad.id %>/students">Show <%= @squad.mascot %> roster</a></h4>
 </body>
 </html>

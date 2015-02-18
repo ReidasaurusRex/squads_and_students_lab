@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><%= @student['name'] %> Edit</title>
+  <title><%= @student.name %> Edit</title>
 </head>
 <body>
-<form action="/squads/<%= @squad['id'].to_s %>/students/<%= @student['id'].to_s %>" method='post'>
+<form action="/squads/<%= @squad.id.to_s %>/students/<%= @student.id.to_s %>" method='post'>
   <input type='hidden' name='_method' value='put'>
   <label for="name">Edit Name: </label>
-  <input type="text" name="name" id="name" value="<%= @student['name'] %>">
+  <input type="text" name="name" id="name" value="<%= @student.name %>">
 
   <label for="age">Edit Age: </label>
-  <input type="text" name="age" id="age" value="<%= @student['age'] %>">
+  <input type="text" name="age" id="age" value="<%= @student.age %>">
 
   <label for="spirit_animal">Edit Spirit Animal: </label>
-  <input type="text" name="spirit_animal" id="spirit_animal" value="<%= @student['spirit_animal'] %>">
+  <input type="text" name="spirit_animal" id="spirit_animal" value="<%= @student.spirit_animal %>">
 
-  <input type="submit" value="Edit <%= @student['name'] %>">
+  <input type="submit" value="Edit <%= @student.name %>">
 
 </form>
 
-<form action="/squads/<%= @squad['id'].to_s %>/students/<%= @student['id'].to_s %>" method='post'>
+<form action="/squads/<%= @squad.id.to_s %>/students/<%= @student.id.to_s %>" method='post'>
   <input type='hidden' name='_method' value='delete'>
 
-  <input type="submit" value="Delete <%= @student['name'] %>">
+  <input type="submit" value="Delete <%= @student.name %>">
 </form>
   
 </body>
